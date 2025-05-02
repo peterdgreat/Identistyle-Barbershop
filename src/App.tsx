@@ -63,7 +63,7 @@ function App() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-black/70 backdrop-blur-sm" />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4">
           <img 
-            src="../dist/assets/logo.jpg" 
+            src="/logo.jpg" 
             alt="Identity Salon Logo" 
             className="w-32 h-32 mb-6 object-contain"
           />
