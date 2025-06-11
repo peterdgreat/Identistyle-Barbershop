@@ -66,6 +66,9 @@ function App() {
             src="/logo.jpg" 
             alt="Identity Salon Logo" 
             className="w-32 h-32 mb-6 object-contain"
+            loading="lazy"
+            width="128"
+            height="128"
           />
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">IDENTISTYLE BARBERSHOP</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl text-neutral-200">
