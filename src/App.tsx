@@ -4,15 +4,16 @@ import { Toaster } from 'react-hot-toast'
 import { 
   Scissors, 
   Clock, 
-  Calendar, 
   MapPin, 
   Phone, 
   Mail,
   Bean as Beard,
   Footprints,
-  Sparkles,
   CheckCircle2
 } from 'lucide-react'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import { trackPageView, trackEvent } from './utils/analytics'
 
 type Service = {
   id: number
@@ -47,7 +48,16 @@ function App() {
     return `₦${price.toLocaleString()}`
   }
 
+  const location = useLocation()
+
+  useEffect(() => {
+    trackPageView(location.pathname)
+  }, [location])
+
   const handleBooking = () => {
+    trackEvent('booking_click', {
+      location: 'hero_section'
+    })
     window.location.href = 'https://www.fresha.com/a/identistyle-barbershop-kubwa-2-2-plot-168-malam-madori-road-duyjcr6l/all-offer?venue=true&pId=2534450'
   }
 
@@ -70,9 +80,9 @@ function App() {
             width="128"
             height="128"
           />
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">IDENTISTYLE BARBERSHOP</h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">IDENTISTYLE BARBERSHOP ABUJA</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl text-neutral-200">
-            Discover and maintain your identity through premium grooming services
+            Experience the best haircuts and grooming services in Abuja. Our expert barbers deliver premium styling, precision cuts, and professional beard grooming.
           </p>
           <button
             onClick={handleBooking}
@@ -86,7 +96,7 @@ function App() {
       {/* Services Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-neutral-800">Our Services</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-neutral-800">Premium Barbershop Services in Abuja</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service) => (
               <div 
@@ -136,13 +146,15 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white" id="contact">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-neutral-800">Contact Us</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-neutral-800">Visit the Best Barbershop in Abuja</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center justify-center text-neutral-600 hover:text-neutral-800 transition-colors duration-300">
               <MapPin className="w-6 h-6 mr-2" />
-              <span>Two Two, Opp Aso Savings</span>
+              <address className="not-italic">
+                Hamza Abdullahi Rd, opp. Aso savings, Junction, Abuja 901101, Federal Capital Territory
+              </address>
             </div>
             <div className="flex items-center justify-center text-neutral-600 hover:text-neutral-800 transition-colors duration-300">
               <Phone className="w-6 h-6 mr-2" />
@@ -150,7 +162,7 @@ function App() {
             </div>
             <div className="flex items-center justify-center text-neutral-600 hover:text-neutral-800 transition-colors duration-300">
               <Mail className="w-6 h-6 mr-2" />
-              <span>info@identitysalonng.com</span>
+              <span>identitysalonng@gmail.com</span>
             </div>
           </div>
         </div>
