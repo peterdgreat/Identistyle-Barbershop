@@ -58,14 +58,13 @@ function App() {
     trackEvent('booking_click', {
       location: 'hero_section'
     })
-    window.location.href = 'https://www.fresha.com/a/identistyle-barbershop-kubwa-2-2-plot-168-malam-madori-road-duyjcr6l/all-offer?venue=true&pId=2534450'
+    window.location.href = 'https://www.fresha.com/book-now/identistyle-barbershop-owmzhdfy/all-offer?share=true&pId=2534450'
   }
 
   const HomePage = () => (
     <>
       {/* Hero Section */}
-      <div 
-        className="h-screen bg-cover bg-center relative"
+      <div className="h-screen bg-cover bg-center relative"
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
         }}
@@ -80,9 +79,9 @@ function App() {
             width="128"
             height="128"
           />
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">IDENTISTYLE BARBERSHOP ABUJA</h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">#1 RATED BARBERSHOP IN ABUJA & KUBWA</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl text-neutral-200">
-            Experience the best haircuts and grooming services in Abuja. Our expert barbers deliver premium styling, precision cuts, and professional beard grooming.
+            Experience Abuja's premier barbershop, rated #1 in both Abuja and Kubwa. Our master barbers deliver exceptional haircuts, premium styling, and professional beard grooming services with unmatched attention to detail.
           </p>
           <button
             onClick={handleBooking}
@@ -96,7 +95,7 @@ function App() {
       {/* Services Section */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-neutral-800">Premium Barbershop Services in Abuja</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-neutral-800">Abuja's Top-Rated Premium Barbershop Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service) => (
               <div 
@@ -118,7 +117,7 @@ function App() {
       {/* Why Choose Us Section */}
       <section className="bg-neutral-900 py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">Why Choose Us</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">Why We're Rated #1 in Abuja & Kubwa</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center group">
               <Scissors className="w-12 h-12 mx-auto mb-4 text-neutral-300 group-hover:text-white transition-colors duration-300" />
@@ -148,7 +147,7 @@ function App() {
       {/* Contact Section */}
       <section className="py-20 px-4 bg-white" id="contact">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-neutral-800">Visit the Best Barbershop in Abuja</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-neutral-800">Visit Abuja's Most Premium Barbershop in Kubwa</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center justify-center text-neutral-600 hover:text-neutral-800 transition-colors duration-300">
               <MapPin className="w-6 h-6 mr-2" />
