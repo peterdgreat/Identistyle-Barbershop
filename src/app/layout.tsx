@@ -6,7 +6,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Identity Salon NG - Premier Hair Salon in Abuja',
+  title: 'Identity Salon NG - Best Barbershop in Kubwa & Abuja, Premium haircut service',
   description: 'Experience premium hair styling and beauty services at Identity Salon in Abuja. Professional haircuts, styling, and beauty treatments for both men and women.',
   keywords: 'hair salon, beauty salon, haircuts, hair styling, Abuja salon, women haircuts, men haircuts, beauty treatments',
   authors: [{ name: 'Identity Salon' }],
