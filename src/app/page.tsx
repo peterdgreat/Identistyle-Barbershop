@@ -1,8 +1,7 @@
-import React from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
-import { Toaster } from 'react-hot-toast'
-import ClassicHaircut from './components/services/ClassicHaircut'
-import BeardTrim from './components/services/BeardTrim'
+'use client';
+
+import Image from 'next/image'
+import Link from 'next/link'
 import { 
   Scissors, 
   Clock, 
@@ -10,12 +9,9 @@ import {
   Phone, 
   Mail,
   Bean as Beard,
-  Footprints,
   CheckCircle2
 } from 'lucide-react'
-import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
-import { trackPageView, trackEvent } from './utils/analytics'
+import { trackEvent } from '../utils/analytics'
 
 type Service = {
   id: number
@@ -25,7 +21,7 @@ type Service = {
   path: string
 }
 
-function App() {
+export default function Home() {
   const services: Service[] = [
     {
       id: 1,
@@ -40,24 +36,8 @@ function App() {
       description: "Expert beard grooming and shaping",
       icon: <Beard className="w-8 h-8 text-neutral-600" />,
       path: "/services/beard-trim"
-    },
-    // {
-    //   id: 3,
-    //   name: "Premium Pedicure",
-    //   description: "Luxurious foot care treatment ",
-    //   icon: <Footprints className="w-8 h-8 text-neutral-600" />
-    // }
+    }
   ]
-
-  const formatPrice = (price: number) => {
-    return `₦${price.toLocaleString()}`
-  }
-
-  const location = useLocation()
-
-  useEffect(() => {
-    trackPageView(location.pathname)
-  }, [location])
 
   const handleBooking = () => {
     trackEvent('booking_click', {
@@ -66,24 +46,28 @@ function App() {
     window.location.href = 'https://wa.me/2347034218566?text=Hello, I would like to book an appointment at IdentiStyle Barbershop.'
   }
 
-  const HomePage = () => (
+  return (
     <main>
       {/* Hero Section */}
       <section 
         className="h-screen bg-cover bg-center relative"
-        style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")'
-        }}
       >
+        <Image
+          src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+          alt="IdentiStyle Barbershop Hero Image"
+          fill
+          priority
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-black/70 backdrop-blur-sm" />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4">
-          <img 
+          <Image 
             src="/logo.jpg" 
             alt="IdentiStyle Barbershop - Best Barbershop in Abuja" 
-            className="w-32 h-32 mb-6 object-contain"
-            loading="lazy"
-            width="128"
-            height="128"
+            width={128}
+            height={128}
+            className="mb-6 object-contain"
+            priority
           />
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
             <span className="block">ABUJA'S #1 RATED</span>
@@ -112,7 +96,7 @@ function App() {
             {services.map((service) => (
               <Link 
                 key={service.id} 
-                to={service.path}
+                href={service.path}
                 className="bg-neutral-50 p-8 rounded-xl hover:bg-neutral-100 transition-all duration-300 shadow-lg"
                 role="listitem"
               >
@@ -181,18 +165,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      <Toaster position="top-center" />
     </main>
   )
-
-  return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/services/classic-haircut" element={<ClassicHaircut />} />
-      <Route path="/services/beard-trim" element={<BeardTrim />} />
-    </Routes>
-  )
 }
-
-export default App
