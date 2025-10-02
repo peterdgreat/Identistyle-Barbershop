@@ -15,7 +15,7 @@ export default function BookingButton({ serviceName, bookingMessage }: BookingBu
     })
 
     // Format the WhatsApp message and URL
-    const phoneNumber = '2348166406935' // Your business WhatsApp number
+    const phoneNumber = '2347034218566' // Your business WhatsApp number
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(bookingMessage)}`
 
     // Open WhatsApp in a new tab
