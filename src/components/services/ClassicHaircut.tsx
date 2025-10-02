@@ -11,44 +11,36 @@ export default function ClassicHaircut() {
   }, [location])
 
   const handleBooking = () => {
-    window.location.href = 'https://wa.me/2347034218566?text=Hello, I would like to book a Classic Haircut at IdentiStyle Barbershop.'
+    window.location.href = 'https://wa.me/2347034218566?text=Hello, I would like to book a Classic Haircut at Identistyle Barbershop - Best Barbershop in Kubwa, Abuja.'
   }
 
   return (
     <main className="pt-20 pb-16">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-neutral-800">
-          Premium Classic Haircut Service in Abuja
+          Premium Classic Haircut Service in Kubwa, Abuja, Nigeria
         </h1>
-        
-        {/* <div className="mb-12">
-          <img 
-            src="/assets/classic-haircut.jpg" 
-            alt="Professional Classic Haircut Service at IdentiStyle Barbershop Abuja" 
-            className="w-full h-[400px] object-cover rounded-xl mb-6"
-          />
-        </div> */}
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <h2 className="text-2xl font-semibold mb-4 text-neutral-800">
-              Expert Haircut Service
+              Expert Haircut Service at Top Barbershop in Kubwa
             </h2>
             <p className="text-neutral-600 mb-4">
-              At IdentiStyle Barbershop, we specialize in delivering precision haircuts that enhance your natural features and style. Our experienced barbers combine traditional techniques with modern trends to create the perfect look for you.
+              At Identistyle Barbershop, the best barbershop in Kubwa, Abuja, we specialize in delivering precision haircuts that enhance your natural features and style. Our experienced barbers combine traditional techniques with modern trends to create the perfect look for you in Nigeria's capital.
             </p>
             <ul className="space-y-3 text-neutral-600">
               <li className="flex items-center gap-2">
                 <Scissors className="w-5 h-5 text-neutral-800" />
-                Precision cutting techniques
+                Precision cutting techniques in Abuja
               </li>
               <li className="flex items-center gap-2">
                 <Scissors className="w-5 h-5 text-neutral-800" />
-                Style consultation included
+                Style consultation included for Kubwa clients
               </li>
               <li className="flex items-center gap-2">
                 <Scissors className="w-5 h-5 text-neutral-800" />
-                Modern and traditional styles
+                Modern and traditional styles at premier barbershop
               </li>
             </ul>
           </div>
@@ -69,19 +61,19 @@ export default function ClassicHaircut() {
 
         <div className="bg-neutral-100 p-8 rounded-xl mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-neutral-800">
-            Why Choose IdentiStyle for Your Haircut
+            Why Choose Identistyle Barbershop for Your Haircut in Kubwa
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h3 className="text-xl font-medium mb-2 text-neutral-800">Expert Barbers</h3>
               <p className="text-neutral-600">
-                Our skilled professionals have years of experience in men's grooming and stay updated with the latest trends.
+                Our skilled professionals have years of experience in men's grooming and stay updated with the latest trends, serving clients at the best barbershop in Kubwa, Abuja.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-medium mb-2 text-neutral-800">Premium Experience</h3>
               <p className="text-neutral-600">
-                Enjoy a luxurious grooming experience in our modern, well-equipped barbershop in Kubwa, Abuja.
+                Enjoy a luxurious grooming experience in our modern, well-equipped barbershop in Kubwa, Abuja, Nigeria.
               </p>
             </div>
           </div>

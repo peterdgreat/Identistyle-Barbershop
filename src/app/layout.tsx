@@ -6,10 +6,10 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Identity Salon NG - Best Barbershop in Kubwa & Abuja, Premium haircut service',
-  description: 'Experience premium hair styling and beauty services at Identity Salon in Abuja. Professional haircuts, styling, and beauty treatments for both men and women.',
-  keywords: 'hair salon, beauty salon, haircuts, hair styling, Abuja salon, women haircuts, men haircuts, beauty treatments',
-  authors: [{ name: 'Identity Salon' }],
+  title: 'Identity Salon NG - Best Barbershop in Kubwa, Abuja, Nigeria | Premium Haircuts & Grooming',
+  description: 'Discover the top barbershop in Kubwa, Abuja, Nigeria at Identity Salon NG. Expert men\'s haircuts, grooming, and premium barber services for the best style in town.',
+  keywords: 'barbershop in abuja, barbershop in kubwa, best barbershop abuja, haircut abuja, men\'s grooming kubwa, barber shop nigeria, abuja barbers, kubwa haircuts, identity salon ng',
+  authors: [{ name: 'Identity Salon NG' }],
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'Identity Salon NG - Premier Hair Salon in Abuja',
-    description: 'Experience premium hair styling and beauty services at Identity Salon in Abuja',
+    title: 'Identity Salon NG - Top Barbershop in Kubwa, Abuja, Nigeria',
+    description: 'The leading barbershop in Kubwa, Abuja offering premium haircuts, grooming, and barber services. Visit us for the best men\'s styling in Nigeria.',
     url: 'https://identitysalonng.com',
     siteName: 'Identity Salon NG',
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: 'https://identitysalonng.com/logo.jpg',
         width: 800,
         height: 600,
-        alt: 'Identity Salon NG Logo'
+        alt: 'Identity Salon NG - Best Barbershop in Kubwa, Abuja'
       }
     ],
     locale: 'en_US',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Identity Salon NG - Premier Hair Salon in Abuja',
-    description: 'Experience premium hair styling and beauty services at Identity Salon in Abuja',
+    title: 'Identity Salon NG - Top Barbershop in Kubwa, Abuja, Nigeria',
+    description: 'Expert barbershop services in Kubwa, Abuja. Premium haircuts and grooming for men. Book your appointment today!',
     images: ['https://identitysalonng.com/logo.jpg'],
   },
   robots: {
@@ -81,8 +81,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'HairSalon',
-              name: 'Identity Salon NG',
+              '@type': 'BarberShop',
+              name: 'Identity Salon NG - Best Barbershop in Kubwa, Abuja',
               image: 'https://identitysalonng.com/logo.jpg',
               '@id': 'https://identitysalonng.com',
               url: 'https://identitysalonng.com',
@@ -90,8 +90,8 @@ export default function RootLayout({
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: process.env.NEXT_PUBLIC_STREET_ADDRESS,
-                addressLocality: 'Abuja',
-                addressRegion: 'FCT',
+                addressLocality: 'Kubwa',
+                addressRegion: 'Abuja FCT',
                 postalCode: process.env.NEXT_PUBLIC_POSTAL_CODE,
                 addressCountry: 'NG'
               },
@@ -100,6 +100,7 @@ export default function RootLayout({
                 latitude: process.env.NEXT_PUBLIC_LATITUDE,
                 longitude: process.env.NEXT_PUBLIC_LONGITUDE
               },
+              description: 'Premier barbershop in Kubwa, Abuja, Nigeria offering expert haircuts, grooming, and men\'s styling services.',
               openingHoursSpecification: [
                 {
                   '@type': 'OpeningHoursSpecification',
@@ -114,11 +115,16 @@ export default function RootLayout({
                   closes: '18:00'
                 }
               ],
+              priceRange: '$$',
               sameAs: [
                 'https://www.instagram.com/identitysalonng',
                 'https://www.tiktok.com/@identitysalonng',
                 'https://www.facebook.com/identitysalonng'
-              ]
+              ],
+              areaServed: {
+                '@type': 'Place',
+                name: 'Kubwa, Abuja, Nigeria'
+              }
             })
           }}
         />

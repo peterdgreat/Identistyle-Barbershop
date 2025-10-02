@@ -11,44 +11,37 @@ export default function BeardTrim() {
   }, [location])
 
   const handleBooking = () => {
-    window.location.href = 'https://wa.me/2347034218566?text=Hello, I would like to book a Beard Trim & Styling service at IdentiStyle Barbershop.'
+    window.location.href = 'https://wa.me/2347034218566?text=Hello, I would like to book a Beard Trim & Styling service at Identistyle Barbershop - Best Barbershop in Kubwa, Abuja.'
   }
 
   return (
     <main className="pt-20 pb-16">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-neutral-800">
-          Professional Beard Trim & Styling in Abuja
+          Professional Beard Trim & Styling in Kubwa, Abuja, Nigeria
         </h1>
-        
-        {/* <div className="mb-12">
-          <img 
-            src="/assets/beard-trim.jpg" 
-            alt="Expert Beard Trimming and Styling at IdentiStyle Barbershop Abuja" 
-            className="w-full h-[400px] object-cover rounded-xl mb-6"
-          />
-        </div> */}
+    
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <h2 className="text-2xl font-semibold mb-4 text-neutral-800">
-              Expert Beard Grooming
+              Expert Beard Grooming at Top Barbershop in Kubwa
             </h2>
             <p className="text-neutral-600 mb-4">
-              Transform your beard with our professional trimming and styling service. Our expert barbers will help you achieve the perfect beard shape that complements your face and style.
+              Transform your beard with our professional trimming and styling service at Identistyle Barbershop, the best barbershop in Kubwa, Abuja. Our expert barbers will help you achieve the perfect beard shape that complements your face and style in Nigeria's capital.
             </p>
             <ul className="space-y-3 text-neutral-600">
               <li className="flex items-center gap-2">
                 <Beard className="w-5 h-5 text-neutral-800" />
-                Custom beard shaping
+                Custom beard shaping in Abuja
               </li>
               <li className="flex items-center gap-2">
                 <Beard className="w-5 h-5 text-neutral-800" />
-                Professional styling
+                Professional styling for Kubwa clients
               </li>
               <li className="flex items-center gap-2">
                 <Beard className="w-5 h-5 text-neutral-800" />
-                Beard care consultation
+                Beard care consultation at premier barbershop
               </li>
             </ul>
           </div>
@@ -70,19 +63,19 @@ export default function BeardTrim() {
 
         <div className="bg-neutral-100 p-8 rounded-xl mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-neutral-800">
-            The IdentiStyle Beard Experience
+            The Identistyle Beard Experience in Kubwa, Abuja
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h3 className="text-xl font-medium mb-2 text-neutral-800">Skilled Professionals</h3>
               <p className="text-neutral-600">
-                Our barbers are experts in beard grooming, understanding different facial hair types and growth patterns.
+                Our barbers are experts in beard grooming, understanding different facial hair types and growth patterns, serving clients at the best barbershop in Kubwa, Abuja.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-medium mb-2 text-neutral-800">Premium Products</h3>
               <p className="text-neutral-600">
-                We use high-quality beard care products to ensure your beard looks and feels its best.
+                We use high-quality beard care products to ensure your beard looks and feels its best, available at our top-rated barbershop in Abuja, Nigeria.
               </p>
             </div>
           </div>

@@ -26,14 +26,14 @@ export default function Home() {
     {
       id: 1,
       name: "Classic Haircut",
-      description: "Precision cut tailored to your style and face shape",
+      description: "Precision cut tailored to your style and face shape at the best barbershop in Kubwa, Abuja",
       icon: <Scissors className="w-8 h-8 text-neutral-600" />,
       path: "/services/classic-haircut"
     },
     {
       id: 2,
       name: "Beard Trim & Styling",
-      description: "Expert beard grooming and shaping",
+      description: "Expert beard grooming and shaping services in Abuja's top barbershop",
       icon: <Beard className="w-8 h-8 text-neutral-600" />,
       path: "/services/beard-trim"
     }
@@ -43,7 +43,7 @@ export default function Home() {
     trackEvent('booking_click', {
       location: 'hero_section'
     })
-    window.location.href = 'https://wa.me/2347034218566?text=Hello, I would like to book an appointment at IdentiStyle Barbershop.'
+    window.location.href = 'https://wa.me/2347034218566?text=Hello, I would like to book an appointment at Identistyle Barbershop - Best Barbershop in Kubwa, Abuja.'
   }
 
   return (
@@ -54,7 +54,7 @@ export default function Home() {
       >
         <Image
           src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
-          alt="IdentiStyle Barbershop Hero Image"
+          alt="Identistyle Barbershop - Best Barbershop in Kubwa, Abuja, Nigeria"
           fill
           priority
           className="object-cover"
@@ -63,23 +63,23 @@ export default function Home() {
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4">
           <Image 
             src="/logo.jpg" 
-            alt="IdentiStyle Barbershop - Best Barbershop in Abuja" 
+            alt="Identistyle Barbershop - Premier Barbershop in Kubwa & Abuja" 
             width={128}
             height={128}
             className="mb-6 object-contain"
             priority
           />
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-            <span className="block">ABUJA'S #1 RATED</span>
+            <span className="block">KUBWA & ABUJA'S #1</span>
             <span className="block">PREMIUM BARBERSHOP</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl text-neutral-200">
-            Experience Abuja's finest barbershop, rated #1 in both Abuja & Kubwa. Our master barbers deliver exceptional haircuts, premium styling, and expert grooming services with unmatched attention to detail.
+            Discover the best barbershop in Kubwa, Abuja at Identistyle Barbershop. Rated #1 for premium haircuts, expert grooming, and men's styling services in Nigeria's capital.
           </p>
           <button
             onClick={handleBooking}
             className="bg-white text-black px-8 py-3 rounded-lg text-lg font-semibold hover:bg-neutral-100 transition-all duration-300"
-            aria-label="Book appointment via WhatsApp"
+            aria-label="Book appointment at best barbershop in Kubwa, Abuja via WhatsApp"
           >
             Book Your Appointment Now
           </button>
@@ -90,7 +90,7 @@ export default function Home() {
       <section className="py-20 px-4 bg-white" aria-labelledby="services-title">
         <div className="max-w-6xl mx-auto">
           <h2 id="services-title" className="text-3xl font-bold text-center mb-12 text-neutral-800">
-            Premium Barbershop Services in Abuja & Kubwa
+            Premium Barbershop Services in Kubwa, Abuja & Nigeria
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8" role="list">
             {services.map((service) => (
@@ -115,28 +115,28 @@ export default function Home() {
       <section className="bg-neutral-900 py-20 px-4" aria-labelledby="why-choose-title">
         <div className="max-w-6xl mx-auto">
           <h2 id="why-choose-title" className="text-3xl font-bold text-center mb-12 text-white">
-            Why We're Abuja's Top-Rated Barbershop
+            Why Identistyle Barbershop is Kubwa & Abuja's Top-Rated Barbershop
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center group">
               <Scissors className="w-12 h-12 mx-auto mb-4 text-neutral-300 group-hover:text-white transition-colors duration-300" />
-              <h3 className="text-xl font-semibold mb-2 text-white">Expert Stylists</h3>
+              <h3 className="text-xl font-semibold mb-2 text-white">Expert Barbers</h3>
               <p className="text-neutral-400">
-                Our team of skilled professionals specializes in men's grooming
+                Master barbers specializing in premium haircuts and grooming in Kubwa, Abuja
               </p>
             </div>
             <div className="text-center group">
               <Clock className="w-12 h-12 mx-auto mb-4 text-neutral-300 group-hover:text-white transition-colors duration-300" />
-              <h3 className="text-xl font-semibold mb-2 text-white">Flexible Hours</h3>
+              <h3 className="text-xl font-semibold mb-2 text-white">Convenient Hours</h3>
               <p className="text-neutral-400">
-                Open 7 days a week with convenient booking times
+                Open daily for flexible appointments at your local barbershop in Abuja
               </p>
             </div>
             <div className="text-center group">
               <CheckCircle2 className="w-12 h-12 mx-auto mb-4 text-neutral-300 group-hover:text-white transition-colors duration-300" />
-              <h3 className="text-xl font-semibold mb-2 text-white">Premium Service</h3>
+              <h3 className="text-xl font-semibold mb-2 text-white">Premium Experience</h3>
               <p className="text-neutral-400">
-                Quality products and attention to detail
+                High-quality products and personalized service for men in Nigeria
               </p>
             </div>
           </div>
@@ -147,12 +147,12 @@ export default function Home() {
       <section className="py-20 px-4 bg-white" id="contact" aria-labelledby="contact-title">
         <div className="max-w-6xl mx-auto">
           <h2 id="contact-title" className="text-3xl font-bold text-center mb-12 text-neutral-800">
-            Visit Abuja's Most Premium Barbershop
+            Visit the Best Barbershop in Kubwa, Abuja Today
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <address className="flex items-center justify-center text-neutral-600 hover:text-neutral-800 transition-colors duration-300 not-italic">
               <MapPin className="w-6 h-6 mr-2" aria-hidden="true" />
-              <span>Hamza Abdullahi Rd, opp. Aso savings, Junction, Abuja 901101, Federal Capital Territory</span>
+              <span>Hamza Abdullahi Rd, opp. Aso savings, Junction, Kubwa, Abuja 901101, Federal Capital Territory</span>
             </address>
             <div className="flex items-center justify-center text-neutral-600 hover:text-neutral-800 transition-colors duration-300">
               <Phone className="w-6 h-6 mr-2" aria-hidden="true" />

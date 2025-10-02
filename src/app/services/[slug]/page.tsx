@@ -6,10 +6,10 @@ import BookingButton from '@/components/services/BookingButton'
 // Define service data
 const services = {
   'classic-haircut': {
-    title: 'Premium Classic Haircut Service in Abuja',
-    description: 'Experience precision haircuts that enhance your natural features at IdentiStyle Barbershop. Expert barbers combining traditional techniques with modern trends in Abuja.',
+    title: 'Premium Classic Haircut Service in Kubwa, Abuja, Nigeria',
+    description: 'Experience precision haircuts that enhance your natural features at Identistyle Barbershop, the best barbershop in Kubwa, Abuja. Expert barbers combining traditional techniques with modern trends.',
     icon: Scissors,
-    features: ['Precision cutting techniques', 'Style consultation included', 'Modern and traditional styles'],
+    features: ['Precision cutting techniques in Kubwa', 'Style consultation included', 'Modern and traditional styles for Abuja men'],
     includes: [
       'Professional consultation',
       'Shampoo and conditioning',
@@ -17,13 +17,13 @@ const services = {
       'Style finishing',
       'Styling tips and product recommendations'
     ],
-    bookingMessage: 'Hello, I would like to book a Classic Haircut at IdentiStyle Barbershop.'
+    bookingMessage: 'Hello, I would like to book a Classic Haircut at Identistyle Barbershop - Best Barbershop in Kubwa, Abuja.'
   },
   'beard-trim': {
-    title: 'Professional Beard Trim & Styling in Abuja',
-    description: 'Transform your beard with our professional trimming and styling service at IdentiStyle Barbershop. Expert barbers helping you achieve the perfect beard shape in Abuja.',
+    title: 'Professional Beard Trim & Styling in Kubwa, Abuja, Nigeria',
+    description: 'Transform your beard with our professional trimming and styling service at Identistyle Barbershop, the top barbershop in Kubwa, Abuja. Expert barbers helping you achieve the perfect beard shape.',
     icon: Bean,
-    features: ['Custom beard shaping', 'Professional styling', 'Beard care consultation'],
+    features: ['Custom beard shaping in Abuja', 'Professional styling', 'Beard care consultation for Kubwa clients'],
     includes: [
       'Beard consultation',
       'Hot towel treatment',
@@ -32,7 +32,7 @@ const services = {
       'Beard oil application',
       'Maintenance advice'
     ],
-    bookingMessage: 'Hello, I would like to book a Beard Trim & Styling service at IdentiStyle Barbershop.'
+    bookingMessage: 'Hello, I would like to book a Beard Trim & Styling service at Identistyle Barbershop - Best Barbershop in Kubwa, Abuja.'
   }
 }
 
@@ -45,27 +45,34 @@ export async function generateMetadata(
   
   if (!service) {
     return {
-      title: 'Service Not Found - IdentiStyle Barbershop',
-      description: 'The requested service could not be found.'
+      title: 'Service Not Found - Identistyle Barbershop',
+      description: 'The requested service could not be found at the best barbershop in Kubwa, Abuja.'
     }
   }
 
   return {
-    title: `${service.title} - IdentiStyle Barbershop`,
+    title: `${service.title} | Identistyle Barbershop - Best Barbershop in Kubwa, Abuja`,
     description: service.description,
+    keywords: `barbershop in kubwa, barbershop in abuja, ${slug.replace('-', ' ')} kubwa, haircut abuja, grooming kubwa, identistyle barbershop`,
     openGraph: {
-      title: service.title,
+      title: `${service.title} | Identistyle Barbershop`,
       description: service.description,
       type: 'website',
-      url: `https://www.identitysalonng.com/services/${slug}`,
+      url: `https://identitysalonng.com/services/${slug}`,
       images: [
         {
-          url: `https://www.identitysalonng.com/assets/${slug}.jpg`,
+          url: `https://identitysalonng.com/assets/${slug}.jpg`,
           width: 800,
           height: 600,
-          alt: `${service.title} at IdentiStyle Barbershop`
+          alt: `${service.title} at Identistyle Barbershop in Kubwa, Abuja`
         }
       ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${service.title} | Identistyle Barbershop`,
+      description: service.description,
+      images: [`https://identitysalonng.com/assets/${slug}.jpg`],
     }
   }
 }
@@ -91,7 +98,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <h2 className="text-2xl font-semibold mb-4 text-neutral-800">
-              Expert Service
+              Expert Service in Kubwa, Abuja
             </h2>
             <p className="text-neutral-600 mb-4">{service.description}</p>
             <ul className="space-y-3 text-neutral-600">
@@ -118,19 +125,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
         <div className="bg-neutral-100 p-8 rounded-xl mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-neutral-800">
-            Why Choose IdentiStyle
+            Why Choose Identistyle Barbershop in Kubwa
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <h3 className="text-xl font-medium mb-2 text-neutral-800">Expert Professionals</h3>
               <p className="text-neutral-600">
-                Our skilled professionals have years of experience and stay updated with the latest trends.
+                Our skilled professionals have years of experience and stay updated with the latest trends in Abuja.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-medium mb-2 text-neutral-800">Premium Experience</h3>
               <p className="text-neutral-600">
-                Enjoy a luxurious grooming experience in our modern, well-equipped barbershop in Kubwa, Abuja.
+                Enjoy a luxurious grooming experience in our modern, well-equipped barbershop in Kubwa, Abuja, Nigeria.
               </p>
             </div>
           </div>
@@ -153,20 +160,25 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               name: service.title,
               description: service.description,
               provider: {
-                '@type': 'LocalBusiness',
-                name: 'IdentiStyle Barbershop',
+                '@type': 'BarberShop',
+                name: 'Identistyle Barbershop - Best Barbershop in Kubwa, Abuja',
                 address: {
                   '@type': 'PostalAddress',
                   streetAddress: 'Hamza Abdullahi Rd, opp. Aso savings, Junction',
-                  addressLocality: 'Abuja',
-                  addressRegion: 'Federal Capital Territory',
+                  addressLocality: 'Kubwa',
+                  addressRegion: 'Abuja, Federal Capital Territory',
                   postalCode: '901101',
                   addressCountry: 'NG'
+                },
+                geo: {
+                  '@type': 'GeoCoordinates',
+                  latitude: 9.1333,
+                  longitude: 7.3833
                 }
               },
               areaServed: {
                 '@type': 'City',
-                name: 'Abuja'
+                name: 'Kubwa, Abuja, Nigeria'
               },
               offers: {
                 '@type': 'Offer',
