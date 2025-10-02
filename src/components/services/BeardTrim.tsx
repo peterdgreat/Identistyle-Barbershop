@@ -1,14 +1,13 @@
 import React from 'react'
 import { Bean as Beard } from 'lucide-react'
-import { useLocation } from 'react-router-dom'
+import { usePathname } from 'next/navigation';
 import { trackPageView } from '../../utils/analytics'
 
 export default function BeardTrim() {
-  const location = useLocation()
-
+const pathname = usePathname();
   React.useEffect(() => {
-    trackPageView(location.pathname)
-  }, [location])
+    trackPageView(pathname)
+  }, [pathname])
 
   const handleBooking = () => {
     window.location.href = 'https://wa.me/2347034218566?text=Hello, I would like to book a Beard Trim & Styling service at Identistyle Barbershop - Best Barbershop in Kubwa, Abuja.'
