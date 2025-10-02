@@ -3,7 +3,12 @@ import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],  // Keep this
+  display: 'swap',     // Add: Shows fallback instantly, then swaps font when ready
+  fallback: ['sans-serif'],  // Add: Explicit fallback for reliability
+  preload: false,      // Add: Skips aggressive preloading in dev (enable in prod)
+});
 
 export const metadata: Metadata = {
   title: 'Identity Salon NG - Best Barbershop in Kubwa, Abuja, Nigeria | Premium Haircuts & Grooming',
